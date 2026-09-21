@@ -1,4 +1,16 @@
+# Build output
 target/
 project/target/
 project/project/
-data/
+
+# Editors and build servers
+.bsp/
+.bloop/
+.metals/
+.idea/
+.vscode/
+
+# Extracted Open Food Facts data: not redistributed, see DATA.md.
+# The provenance record is kept, since the article and RESULTS.md refer to it.
+data/*
+!data/PROVENANCE.txt

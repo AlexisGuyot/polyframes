@@ -3,7 +3,7 @@ package polyframes.bench
 import java.nio.file.Path
 
 /**
- * The fifteen programs section 5 compiles: the reference pipeline written
+ * The 30 programs section 5 compiles: the reference pipeline written
  * three ways, and the four families of engineering errors injected into
  * each of the three.
  *

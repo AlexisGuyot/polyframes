@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicLong
  *
  * The result reads exactly as the rules do:
  *
- *   add[Document, "identity" :: "adult" :: HNil](d, f)
+ *   add[Document, "identity" :: "adult" :: HNil](d)(f)
  *   project[Relation, LProj](d)
  *
  * with the paths and the announced model at the type level, and the data

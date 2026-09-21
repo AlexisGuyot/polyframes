@@ -39,23 +39,32 @@ Run `.\scripts\check-env.ps1` to confirm all five.
 
 ### The pipeline variants
 
-Some variants are meant not to compile: they carry the four families of data engineering errors the article prevents. They therefore live under `variants/` rather than in the source tree, and each is compiled in isolation, so that a variant failing to compile does not stop the others.
+Each of the two pipelines of the article, P1 and P2, is written three ways: with PolyFrames, with plain `DataFrame`s and with `Dataset`s. The six correct versions live in the source tree of the harness (`bench/src/main/scala/polyframes/bench/P1.scala`, `P1DataFrame.scala`, `P1Dataset.scala`, and the same three for P2).
+
+The four families of data engineering errors the article prevents are then injected into each of the six. Some of the resulting variants are meant not to compile, so they live under `variants/` rather than in the source tree, and each is compiled in isolation, so that a variant failing to compile does not stop the others.
 
 ```
 variants/
-  p1-ok.scala            the reference pipeline, error free
-  p1-noattr.scala        an attribute absent from the schema
-  p1-badtype.scala       an attribute of an unexpected domain
-  p1-badmodel.scala      data in a model the operator does not accept
-  p1-badtransfo.scala    a transformation breaking the announced model
-  ...                    the same four, for the DataFrame and Dataset baselines
+  pf-*.scala      P1 written with PolyFrames
+  df-*.scala      P1 written with DataFrames
+  ds-*.scala      P1 written with Datasets
+  pf2-*.scala     P2, same three prefixes with a 2
+  df2-*.scala
+  ds2-*.scala
+  width-N.scala   a declaration of N attributes, for the compilation-time axis
+
+  *-noattr        an attribute absent from the schema
+  *-badtype       an attribute of an unexpected domain
+  *-badmodel      data in a model the operator does not accept
+  *-badtransfo    a transformation breaking the announced model
 ```
 
-`RunAll` compiles each of them, records whether compilation succeeded and how long it took, then runs the ones that compiled and records whether they fail at
-run time. To try one by hand:
+`sbt experiments` runs four programs in turn, each in a JVM of its own: `CompileWidth` times the `width-N` declarations, `CompileVariants` compiles every variant and records whether it compiled and how long it took, `RunExperiments` runs the variants that compiled and records whether they fail at run time, then measures the correct pipelines at each volume, and `Report` writes `RESULTS.md`. `PROTOCOL.md` describes each of them in full.
+
+To try one variant by hand, without timing anything or writing to `results.csv`:
 
 ```
-sbt "bench/runMain polyframes.bench.CompileVariant variants/p1-noattr.scala"
+sbt "bench/runMain polyframes.bench.CompileVariant variants/pf-noattr.scala"
 ```
 
 The compiler message it prints is the guarantee, in the form a user sees it.
@@ -67,18 +76,25 @@ Open Food Facts, daily JSONL export, ODbL. See `DATA.md` for the exact dump date
 ## Layout
 
 ```
-core/      the library: types, inference, runtime layer, operators
-bench/     the measured pipelines, the baselines and the harness
-variants/  standalone pipeline variants, each compiled in isolation, including the ones that must fail to compile
-scripts/   data extraction, compilation of the variants, evaluation
-MAPPING.md article rule -> Scala construct -> file
-PROTOCOL.md what the experiments measure, and how
+core/        the library: types, inference, runtime layer, operators
+bench/       the measured pipelines, the baselines and the harness
+variants/    standalone pipeline variants, each compiled in isolation,
+             including the ones that must fail to compile
+reference/   the hand-written reference table P2 integrates with
+scripts/     environment checks (check-env.sh, check-env.ps1)
+MAPPING.md   article rule -> Scala construct -> file
+PROTOCOL.md  what the experiments measure, and how
+DATA.md      where the data come from, and under which licence
+results.csv  every figure the article reports
+RESULTS.md   a reading of results.csv
 ```
 
 ## Citing
 
-TODO Zenodo DOI
+If you use PolyFrames, please cite it through the metadata in `CITATION.cff` (GitHub offers them under "Cite this repository"). Every release is archived on Zenodo.
 
 ## Licence
 
-TODO
+The code is distributed under the GNU General Public License, version 3 only (`GPL-3.0-only`); see `LICENSE`.
+
+The Open Food Facts data used by the experiments are not distributed with the code. They are available under the Open Database License (ODbL); see `DATA.md`.

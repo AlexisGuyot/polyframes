@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: >-
+  PolyFrames: companion code for "Leveraging Types to Improve the
+  Robustness of Analytical Pipelines in Schema-on-Read Systems"
+abstract: >-
+  PolyFrames is a typed layer over SparkSQL DataFrames. It encodes the
+  schema and the logical model of data in types, and infers how both evolve
+  along a pipeline, so that a compiler rejects transformations and
+  compositions that would otherwise fail at run time. It is a proof of
+  concept whose kernel implements the rules of the article and nothing
+  beyond them, together with the harness that produced the experimental
+  results reported in the article.
+authors:
+  - family-names: Guyot
+    given-names: Alexis
+    orcid: "https://orcid.org/0000-0001-5896-7693"
+    affiliation: "Aix Marseille Univ, CNRS, LIS, Marseille, France"
+    email: alexis.guyot@lis-lab.fr
+repository-code: "https://github.com/AlexisGuyot/polyframes"
+license: GPL-3.0-only
+version: 0.1.0
+keywords:
+  - type systems
+  - type inference
+  - schema-on-read
+  - data lakes
+  - multi-model data
+  - Scala
+  - Shapeless
+  - Spark SQL
