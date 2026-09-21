@@ -91,7 +91,7 @@ RESULTS.md   a reading of results.csv
 
 ## Citing
 
-If you use PolyFrames, please cite it through the metadata in `CITATION.cff` (GitHub offers them under "Cite this repository"). Every release is archived on Zenodo.
+If you use PolyFrames, please cite it through the metadata in `CITATION.cff` (GitHub offers them under "Cite this repository"). Every release is archived on Zenodo : https://doi.org/10.5281/zenodo.22875856.
 
 ## Licence
 
