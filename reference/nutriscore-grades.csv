@@ -1,0 +1,7 @@
+grade_code,grade_label,grade_rank
+a,Very good nutritional quality,1
+b,Good nutritional quality,2
+c,Average nutritional quality,3
+d,Poor nutritional quality,4
+e,Bad nutritional quality,5
+unknown,Not assessed,6

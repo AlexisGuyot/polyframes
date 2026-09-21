@@ -1,0 +1,138 @@
+experiment,subject,baseline,family,volume,width,metric,value,note
+width,width-5,polyframes,none,,5,compile-ms,752,
+width,width-10,polyframes,none,,10,compile-ms,735,
+width,width-20,polyframes,none,,20,compile-ms,849,
+width,width-40,polyframes,none,,40,compile-ms,1542,
+width,width-80,polyframes,none,,80,compile-ms,10258,
+error-prevention,p1,polyframes,none,,,compiles,true,
+error-prevention,p1,polyframes,none,,,compile-ms,1625,median of 4 runs
+error-prevention,p1-dataframe,dataframe,none,,,compiles,true,
+error-prevention,p1-dataframe,dataframe,none,,,compile-ms,337,median of 4 runs
+error-prevention,p1-dataset,dataset,none,,,compiles,true,
+error-prevention,p1-dataset,dataset,none,,,compile-ms,959,median of 4 runs
+error-prevention,pf-noattr,polyframes,noattr,,,compiles,false,"could not find implicit value for parameter reduce: polyframes.infer.Project.Aux[shapeless.labelled.FieldType[String(""code""),String] :: shapeless.labelled.FieldType[String(""product_type""),String] :: shapeless.labelled.FieldType[String(""nutriscore_grade""),String] :: shapeless.labelled.FieldType[String(""pnns_groups_1""),String] :: shapeless.labelled.FieldType[String(""completeness""),Double] :: shapeless.labelled.FieldType[String(""countries_tags""),List[String]] :: shapeless.labelled.FieldType[""nutriments"",shapeless.labelled.FieldType[String(""energy-kcal_100g""),Double] :: shapeless.labelled.FieldType[String(""fat_100g""),Double] :: shapeless.labelled.FieldType[String(""carbohydrates_100g""),Double] :: shapeless.labelled.FieldType[String(""proteins""),Double] :: shapeless.labelled.FieldType[String(""salt""),Double] :: shapeless.labelled.FieldType[""carb_share"",Double] :: shapeless.HNil] :: shapeless.labelled.FieldType[""is_beverage"",Boolean] :: shapeless.HNil,(""cod"" :: shapeless.HNil) :: (""nutriscore_grade"" :: shapeless.HNil) :: shapeless.HNil,NS] (PolyFrames: the paths (""cod"" :: shapeless.HNil) :: (""nutriscore_grade"" :: shapeless.HNil) :: shapeless.HNil cannot be projected from the schema"
+error-prevention,pf-noattr,polyframes,noattr,,,compile-ms,499,median of 4 runs
+error-prevention,pf-badtype,polyframes,badtype,,,compiles,false,type mismatch;
+error-prevention,pf-badtype,polyframes,badtype,,,compile-ms,360,median of 4 runs
+error-prevention,pf-badmodel,polyframes,badmodel,,,compiles,false,type mismatch;
+error-prevention,pf-badmodel,polyframes,badmodel,,,compile-ms,281,median of 4 runs
+error-prevention,pf-badtransfo,polyframes,badtransfo,,,compiles,false,PolyFrames: the schema
+error-prevention,pf-badtransfo,polyframes,badtransfo,,,compile-ms,281,median of 4 runs
+error-prevention,df-noattr,dataframe,noattr,,,compiles,true,
+error-prevention,df-noattr,dataframe,noattr,,,compile-ms,140,median of 4 runs
+error-prevention,df-badtype,dataframe,badtype,,,compiles,true,
+error-prevention,df-badtype,dataframe,badtype,,,compile-ms,122,median of 4 runs
+error-prevention,df-badmodel,dataframe,badmodel,,,compiles,true,
+error-prevention,df-badmodel,dataframe,badmodel,,,compile-ms,104,median of 4 runs
+error-prevention,df-badtransfo,dataframe,badtransfo,,,compiles,true,
+error-prevention,df-badtransfo,dataframe,badtransfo,,,compile-ms,92,median of 4 runs
+error-prevention,ds-noattr,dataset,noattr,,,compiles,false,value cod is not a member of polyframes.bench.P1Dataset.ProductBeverage
+error-prevention,ds-noattr,dataset,noattr,,,compile-ms,136,median of 4 runs
+error-prevention,ds-badtype,dataset,badtype,,,compiles,false,type mismatch;
+error-prevention,ds-badtype,dataset,badtype,,,compile-ms,99,median of 4 runs
+error-prevention,ds-badmodel,dataset,badmodel,,,compiles,true,
+error-prevention,ds-badmodel,dataset,badmodel,,,compile-ms,182,median of 4 runs
+error-prevention,ds-badtransfo,dataset,badtransfo,,,compiles,true,
+error-prevention,ds-badtransfo,dataset,badtransfo,,,compile-ms,172,median of 4 runs
+error-prevention,p2,polyframes,none,,,compiles,true,
+error-prevention,p2,polyframes,none,,,compile-ms,498,median of 4 runs
+error-prevention,p2-dataframe,dataframe,none,,,compiles,true,
+error-prevention,p2-dataframe,dataframe,none,,,compile-ms,87,median of 4 runs
+error-prevention,p2-dataset,dataset,none,,,compiles,true,
+error-prevention,p2-dataset,dataset,none,,,compile-ms,396,median of 4 runs
+error-prevention,pf2-noattr,polyframes,noattr,,,compiles,false,"could not find implicit value for parameter reduce: polyframes.infer.Project.Aux[shapeless.labelled.FieldType[String(""grade_code""),String] :: shapeless.labelled.FieldType[String(""grade_label""),String] :: shapeless.labelled.FieldType[""grade_rank"",Double] :: shapeless.labelled.FieldType[""barcode"",String] :: shapeless.labelled.FieldType[String(""product_type""),String] :: shapeless.labelled.FieldType[String(""nutriscore_grade""),String] :: shapeless.labelled.FieldType[String(""pnns_groups_1""),String] :: shapeless.labelled.FieldType[String(""completeness""),Double] :: shapeless.labelled.FieldType[String(""countries_tags""),List[String]] :: shapeless.labelled.FieldType[""nutriments"",shapeless.labelled.FieldType[String(""energy-kcal_100g""),Double] :: shapeless.labelled.FieldType[String(""fat_100g""),Double] :: shapeless.labelled.FieldType[String(""carbohydrates_100g""),Double] :: shapeless.labelled.FieldType[String(""proteins""),Double] :: shapeless.labelled.FieldType[""carb_share"",Double] :: shapeless.HNil] :: shapeless.labelled.FieldType[""well_rated"",Boolean] :: shapeless.HNil,(""barcode"" :: shapeless.HNil) :: (""grade_labell"" :: shapeless.HNil) :: shapeless.HNil,NS] (PolyFrames: the paths (""barcode"" :: shapeless.HNil) :: (""grade_labell"" :: shapeless.HNil) :: shapeless.HNil cannot be projected from the schema"
+error-prevention,pf2-noattr,polyframes,noattr,,,compile-ms,442,median of 4 runs
+error-prevention,pf2-badtype,polyframes,badtype,,,compiles,false,type mismatch;
+error-prevention,pf2-badtype,polyframes,badtype,,,compile-ms,345,median of 4 runs
+error-prevention,pf2-badmodel,polyframes,badmodel,,,compiles,false,type mismatch;
+error-prevention,pf2-badmodel,polyframes,badmodel,,,compile-ms,455,median of 4 runs
+error-prevention,pf2-badtransfo,polyframes,badtransfo,,,compiles,false,PolyFrames: the schema
+error-prevention,pf2-badtransfo,polyframes,badtransfo,,,compile-ms,361,median of 4 runs
+error-prevention,df2-noattr,dataframe,noattr,,,compiles,true,
+error-prevention,df2-noattr,dataframe,noattr,,,compile-ms,74,median of 4 runs
+error-prevention,df2-badtype,dataframe,badtype,,,compiles,true,
+error-prevention,df2-badtype,dataframe,badtype,,,compile-ms,74,median of 4 runs
+error-prevention,df2-badmodel,dataframe,badmodel,,,compiles,true,
+error-prevention,df2-badmodel,dataframe,badmodel,,,compile-ms,75,median of 4 runs
+error-prevention,df2-badtransfo,dataframe,badtransfo,,,compiles,true,
+error-prevention,df2-badtransfo,dataframe,badtransfo,,,compile-ms,82,median of 4 runs
+error-prevention,ds2-noattr,dataset,noattr,,,compiles,false,value grade_labell is not a member of polyframes.bench.P2Dataset.Rated
+error-prevention,ds2-noattr,dataset,noattr,,,compile-ms,104,median of 4 runs
+error-prevention,ds2-badtype,dataset,badtype,,,compiles,false,type mismatch;
+error-prevention,ds2-badtype,dataset,badtype,,,compile-ms,102,median of 4 runs
+error-prevention,ds2-badmodel,dataset,badmodel,,,compiles,true,
+error-prevention,ds2-badmodel,dataset,badmodel,,,compile-ms,148,median of 4 runs
+error-prevention,ds2-badtransfo,dataset,badtransfo,,,compiles,true,
+error-prevention,ds2-badtransfo,dataset,badtransfo,,,compile-ms,152,median of 4 runs
+error-prevention,df-noattr,dataframe,noattr,,,runs,false,"ExtendedAnalysisException: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `cod` cannot be resolved. Did you mean one of the following? [`code`, `completeness`, `nutriments`, `product_type`, `is_beverage`]. SQLSTATE: 42703;"
+error-prevention,df-badtype,dataframe,badtype,,,runs,false,"SparkNumberFormatException: [CAST_INVALID_INPUT] The value 'e' of the type ""STRING"" cannot be cast to ""DOUBLE"" because it is malformed. Correct the value as per the syntax, or change its target type. Use `try_cast` to tolerate malformed input and return NULL instead. SQLSTATE: 22018"
+error-prevention,df-badmodel,dataframe,badmodel,,,runs,false,"AnalysisException: [UNSUPPORTED_DATA_TYPE_FOR_DATASOURCE] The CSV datasource doesn't support the column `countries_tags` of the type ""ARRAY<STRING>"". SQLSTATE: 0A000"
+error-prevention,df-badtransfo,dataframe,badtransfo,,,runs,false,"AnalysisException: [UNSUPPORTED_DATA_TYPE_FOR_DATASOURCE] The CSV datasource doesn't support the column `nutriments` of the type ""STRUCT<carb_share: DOUBLE>"". SQLSTATE: 0A000"
+error-prevention,ds-badmodel,dataset,badmodel,,,runs,false,"AnalysisException: [UNSUPPORTED_DATA_TYPE_FOR_DATASOURCE] The CSV datasource doesn't support the column `countries_tags` of the type ""ARRAY<STRING>"". SQLSTATE: 0A000"
+error-prevention,ds-badtransfo,dataset,badtransfo,,,runs,false,"AnalysisException: [UNSUPPORTED_DATA_TYPE_FOR_DATASOURCE] The CSV datasource doesn't support the column `nutriments` of the type ""STRUCT<carb_share: DOUBLE NOT NULL>"". SQLSTATE: 0A000"
+error-prevention,df2-noattr,dataframe,noattr,,,runs,false,"ExtendedAnalysisException: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `grade_labell` cannot be resolved. Did you mean one of the following? [`grade_label`, `grade_code`, `grade_rank`, `well_rated`, `barcode`]. SQLSTATE: 42703;"
+error-prevention,df2-badtype,dataframe,badtype,,,runs,false,"SparkNumberFormatException: [CAST_INVALID_INPUT] The value 'Bad nutritional quality' of the type ""STRING"" cannot be cast to ""DOUBLE"" because it is malformed. Correct the value as per the syntax, or change its target type. Use `try_cast` to tolerate malformed input and return NULL instead. SQLSTATE: "
+error-prevention,df2-badmodel,dataframe,badmodel,,,runs,false,"AnalysisException: [UNSUPPORTED_DATA_TYPE_FOR_DATASOURCE] The CSV datasource doesn't support the column `countries_tags` of the type ""ARRAY<STRING>"". SQLSTATE: 0A000"
+error-prevention,df2-badtransfo,dataframe,badtransfo,,,runs,false,"AnalysisException: [UNSUPPORTED_DATA_TYPE_FOR_DATASOURCE] The CSV datasource doesn't support the column `nutriments` of the type ""STRUCT<`energy-kcal_100g`: DOUBLE, fat_100g: DOUBLE, carbohydrates_100g: DOUBLE, proteins: DOUBLE, carb_share: DOUBLE>"". SQLSTATE: 0A000"
+error-prevention,ds2-badmodel,dataset,badmodel,,,runs,false,"AnalysisException: [UNSUPPORTED_DATA_TYPE_FOR_DATASOURCE] The CSV datasource doesn't support the column `countries_tags` of the type ""ARRAY<STRING>"". SQLSTATE: 0A000"
+error-prevention,ds2-badtransfo,dataset,badtransfo,,,runs,false,"AnalysisException: [UNSUPPORTED_DATA_TYPE_FOR_DATASOURCE] The CSV datasource doesn't support the column `nutriments` of the type ""STRUCT<`energy-kcal_100g`: DOUBLE, fat_100g: DOUBLE, carbohydrates_100g: DOUBLE, proteins: DOUBLE, carb_share: DOUBLE NOT NULL>"". SQLSTATE: 0A000"
+volume,p1,polyframes,none,10000,,run-ms,770,median of 4 runs
+volume,p1,polyframes,none,10000,,heap-mb,198,peak sampled every 50 ms
+volume,p1-dataframe,dataframe,none,10000,,run-ms,766,median of 4 runs
+volume,p1-dataframe,dataframe,none,10000,,heap-mb,247,peak sampled every 50 ms
+volume,p1-dataset,dataset,none,10000,,run-ms,659,median of 4 runs
+volume,p1-dataset,dataset,none,10000,,heap-mb,378,peak sampled every 50 ms
+volume,p2,polyframes,none,10000,,run-ms,710,median of 4 runs
+volume,p2,polyframes,none,10000,,heap-mb,525,peak sampled every 50 ms
+volume,p2-dataframe,dataframe,none,10000,,run-ms,581,median of 4 runs
+volume,p2-dataframe,dataframe,none,10000,,heap-mb,259,peak sampled every 50 ms
+volume,p2-dataset,dataset,none,10000,,run-ms,743,median of 4 runs
+volume,p2-dataset,dataset,none,10000,,heap-mb,329,peak sampled every 50 ms
+volume,p1,polyframes,none,50000,,run-ms,1234,median of 4 runs
+volume,p1,polyframes,none,50000,,heap-mb,553,peak sampled every 50 ms
+volume,p1-dataframe,dataframe,none,50000,,run-ms,1205,median of 4 runs
+volume,p1-dataframe,dataframe,none,50000,,heap-mb,694,peak sampled every 50 ms
+volume,p1-dataset,dataset,none,50000,,run-ms,1244,median of 4 runs
+volume,p1-dataset,dataset,none,50000,,heap-mb,755,peak sampled every 50 ms
+volume,p2,polyframes,none,50000,,run-ms,1368,median of 4 runs
+volume,p2,polyframes,none,50000,,heap-mb,808,peak sampled every 50 ms
+volume,p2-dataframe,dataframe,none,50000,,run-ms,1207,median of 4 runs
+volume,p2-dataframe,dataframe,none,50000,,heap-mb,765,peak sampled every 50 ms
+volume,p2-dataset,dataset,none,50000,,run-ms,1408,median of 4 runs
+volume,p2-dataset,dataset,none,50000,,heap-mb,813,peak sampled every 50 ms
+volume,p1,polyframes,none,100000,,run-ms,2773,median of 4 runs
+volume,p1,polyframes,none,100000,,heap-mb,454,peak sampled every 50 ms
+volume,p1-dataframe,dataframe,none,100000,,run-ms,2835,median of 4 runs
+volume,p1-dataframe,dataframe,none,100000,,heap-mb,792,peak sampled every 50 ms
+volume,p1-dataset,dataset,none,100000,,run-ms,2779,median of 4 runs
+volume,p1-dataset,dataset,none,100000,,heap-mb,829,peak sampled every 50 ms
+volume,p2,polyframes,none,100000,,run-ms,2919,median of 4 runs
+volume,p2,polyframes,none,100000,,heap-mb,910,peak sampled every 50 ms
+volume,p2-dataframe,dataframe,none,100000,,run-ms,2670,median of 4 runs
+volume,p2-dataframe,dataframe,none,100000,,heap-mb,719,peak sampled every 50 ms
+volume,p2-dataset,dataset,none,100000,,run-ms,2914,median of 4 runs
+volume,p2-dataset,dataset,none,100000,,heap-mb,1045,peak sampled every 50 ms
+volume,p1,polyframes,none,250000,,run-ms,6346,median of 4 runs
+volume,p1,polyframes,none,250000,,heap-mb,976,peak sampled every 50 ms
+volume,p1-dataframe,dataframe,none,250000,,run-ms,6500,median of 4 runs
+volume,p1-dataframe,dataframe,none,250000,,heap-mb,810,peak sampled every 50 ms
+volume,p1-dataset,dataset,none,250000,,run-ms,6350,median of 4 runs
+volume,p1-dataset,dataset,none,250000,,heap-mb,1058,peak sampled every 50 ms
+volume,p2,polyframes,none,250000,,run-ms,6809,median of 4 runs
+volume,p2,polyframes,none,250000,,heap-mb,1082,peak sampled every 50 ms
+volume,p2-dataframe,dataframe,none,250000,,run-ms,6207,median of 4 runs
+volume,p2-dataframe,dataframe,none,250000,,heap-mb,976,peak sampled every 50 ms
+volume,p2-dataset,dataset,none,250000,,run-ms,6487,median of 4 runs
+volume,p2-dataset,dataset,none,250000,,heap-mb,1057,peak sampled every 50 ms
+volume,p1,polyframes,none,500000,,run-ms,14129,median of 4 runs
+volume,p1,polyframes,none,500000,,heap-mb,1472,peak sampled every 50 ms
+volume,p1-dataframe,dataframe,none,500000,,run-ms,13521,median of 4 runs
+volume,p1-dataframe,dataframe,none,500000,,heap-mb,903,peak sampled every 50 ms
+volume,p1-dataset,dataset,none,500000,,run-ms,13618,median of 4 runs
+volume,p1-dataset,dataset,none,500000,,heap-mb,935,peak sampled every 50 ms
+volume,p2,polyframes,none,500000,,run-ms,13721,median of 4 runs
+volume,p2,polyframes,none,500000,,heap-mb,1078,peak sampled every 50 ms
+volume,p2-dataframe,dataframe,none,500000,,run-ms,13214,median of 4 runs
+volume,p2-dataframe,dataframe,none,500000,,heap-mb,1116,peak sampled every 50 ms
+volume,p2-dataset,dataset,none,500000,,run-ms,13914,median of 4 runs
+volume,p2-dataset,dataset,none,500000,,heap-mb,1065,peak sampled every 50 ms
